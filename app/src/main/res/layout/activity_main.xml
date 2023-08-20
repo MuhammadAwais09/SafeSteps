@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main Content Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="70px"
+        android:padding="16dp">
+
+        <!-- Full-width Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.CardView">
+
+            <!-- Content of the full-width card -->
+            <!-- Example: Text, images, etc. -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+            <!-- First Sub-Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.CardView">
+            <!-- Content of the first sub-card -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is the first sub-card with dummy text."
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:padding="8dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Gap between the sub-cards -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+        />
+
+        <!-- Second Sub-Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.CardView">
+
+            <!-- Content of the second sub-card -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is the second sub-card with more dummy text."
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:padding="8dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    </RelativeLayout>
