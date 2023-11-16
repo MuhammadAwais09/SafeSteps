@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,18 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="70px"
+        android:layout_marginTop="70dp"
         android:padding="16dp">
 
-        <!-- Full-width Card -->
+        <!-- Fall Detection Card -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             style="@style/Widget.MaterialComponents.CardView">
-
-            <!-- Content of the full-width card -->
-            <!-- Example: Text, images, etc. -->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -27,49 +25,80 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-            <!-- First Sub-Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-            style="@style/Widget.MaterialComponents.CardView">
-            <!-- Content of the first sub-card -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="This is the first sub-card with dummy text."
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                android:padding="8dp"/>
+                <!-- Fall Detection Status -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    style="@style/Widget.MaterialComponents.CardView">
 
+                    <TextView
+                        android:id="@+id/detectionTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="No Fall detected"
+                        android:textColor="@android:color/black"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:padding="8dp"/>
+
+                    <ImageView
+                        android:id="@+id/fallImageView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/fall"
+                        android:padding="8dp"/>
+                    <TextView
+                        android:id="@+id/fallDetectionText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fall detected"
+                        android:textColor="@color/danger"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:padding="8dp"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Fall Detection Text (shown in red when a fall is detected) -->
+
+
+                <!-- Heart Rate Monitoring Status -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    style="@style/Widget.MaterialComponents.CardView">
+
+                    <TextView
+                        android:id="@+id/heartRateTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Heart Rate: N/A"
+                        android:text=""
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:padding="8dp"/>
+
+                    <ImageView
+                        android:id="@+id/heartRateImageView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/cardio"
+                        android:padding="8dp"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Stop Beep Button -->
+                <Button
+                    android:id="@+id/stopButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stop Beep" />
+            </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
-        <!-- Gap between the sub-cards -->
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="16dp"
-        />
-
-        <!-- Second Sub-Card -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.CardView">
-
-            <!-- Content of the second sub-card -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="This is the second sub-card with more dummy text."
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                android:padding="8dp"/>
-
-        </com.google.android.material.card.MaterialCardView>
-
     </LinearLayout>
-
-</com.google.android.material.card.MaterialCardView>
-
-    </LinearLayout>
-
-    </RelativeLayout>
+</RelativeLayout>
